@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Pastel do Miro | Feira do Aratip</title>
+    <meta name="description" content="Cardápio completo da Pastelaria da Orla. Pastéis, tapiocas, cuscuz, bebidas e muito mais. Faça seu pedido pelo WhatsApp.">
+    <meta name="keywords" content="cardápio, pastéis, tapioca, cuscuz, bebidas, pedidos WhatsApp, Aracaju">
+    <meta property="og:title" content="Cardápio - Pastelaria da Orla">
+    <meta property="og:description" content="Cardápio completo com pastéis, tapiocas, cuscuz e bebidas. Peça pelo WhatsApp!">
+    <meta name="twitter:title" content="Cardápio - Pastelaria da Orla">
+    <meta name="twitter:description" content="Cardápio completo com pastéis, tapiocas, cuscuz e bebidas. Peça pelo WhatsApp!">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #dc2626;
+            --secondary-color: #fef2f2;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            padding-top: 80px;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 shadow-lg;
+        }
+        
+        .btn-secondary {
+            @apply bg-[var(--secondary-color)] text-[var(--primary-color)] px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all duration-300 border border-[var(--primary-color)];
+        }
+
+        .menu-card {
+            @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100;
+        }
+
+        .quantity-btn {
+            @apply w-8 h-8 rounded-full border border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white transition-colors flex items-center justify-center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/MenuCategory.js"></script>
+    <script type="text/babel" src="components/MenuItem.js"></script>
+    <script type="text/babel" src="components/Cart.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="utils/menuDataComplete.js"></script>
+    <script type="text/babel" src="cardapio-app.js"></script>
+</body>
+</html>

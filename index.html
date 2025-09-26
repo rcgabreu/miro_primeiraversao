@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastel e Caldo de Cana do Miro</title>
+    <meta name="description" content="A melhor pastelaria da Orla da Atalaia desde 1999. Pastéis, tapiocas, cuscuz e muito mais na Feira do Aratip, Barraca 25.">
+    <meta name="keywords" content="pastelaria, Aracaju, Orla da Atalaia, pastéis, tapioca, cuscuz, Feira do Aratip">
+    <meta property="og:title" content="Pastelaria da Orla - Feira do Aratip">
+    <meta property="og:description" content="A melhor pastelaria da Orla da Atalaia desde 1999. Pastéis, tapiocas, cuscuz e muito mais.">
+    <meta name="twitter:title" content="Pastelaria da Orla - Feira do Aratip">
+    <meta name="twitter:description" content="A melhor pastelaria da Orla da Atalaia desde 1999. Pastéis, tapiocas, cuscuz e muito mais.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #dc2626;
+            --secondary-color: #fef2f2;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .hero-banner {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://app.trickle.so/storage/public/images/usr_15b87a35d0000001/f631599d-ae39-47ff-9b12-9cbc04cb8465.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 shadow-lg;
+        }
+        
+        .btn-secondary {
+            @apply bg-[var(--secondary-color)] text-[var(--primary-color)] px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all duration-300 border border-[var(--primary-color)];
+        }
+        
+        .card-hover {
+            @apply transform hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl;
+        }
+    }
+
+    @layer utilities {
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/ProductCarousel.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
